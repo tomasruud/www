@@ -1,10 +1,22 @@
-language: generic
+language: node_js
+node_js:
+  - 8
+env:
+  - CI=yes
+cache:
+  directories:
+  - "$HOME/.npm"
 notifications:
   email: false
+install:
+  - npm install
+script:
+  - npm run build
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
+  local-dir: build
   fqdn: ruud.ninja
   on:
     branch: master
