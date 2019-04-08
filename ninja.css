@@ -126,6 +126,12 @@ a:hover, a > *:hover {
   animation-delay: -2900ms;
 }
 
+#🎵 {
+  right: 20%;
+  top: 190%;
+  animation-delay: -700ms;
+}
+
 #💯 {
   position: relative;
   z-index: 99; 
@@ -135,39 +141,39 @@ a:hover, a > *:hover {
   max-width: 400px; 
 }
 
-#🛀 {
+#name {
   position: relative;
   overflow: visible;
 }
 
-#🛀 .yellow {
+#name .yellow {
   fill: #ffa000;
 }
 
-#🛀 .yellow,
-#🛀 .smallwhite,
-#🛀 .white {
+#name .yellow,
+#name .smallwhite,
+#name .white {
   animation: hover 4s infinite;
 }
 
-#🛀 .white {
+#name .white {
   animation-delay: 500ms;
 }
 
-#🛀 .yellow:hover {
+#name .yellow:hover {
   fill: #d32f2f;
 }
 
-#🛀 .white,
-#🛀 .smallwhite {
+#name .white,
+#name .smallwhite {
   fill: #fff;
 }
 
-#🛀 .white:hover {
+#name .white:hover {
   fill: #388e3c;
 }
 
-#🛀 .smallwhite:hover {
+#name .smallwhite:hover {
   fill: #d32f2f;
 }
 
@@ -177,7 +183,7 @@ a:hover, a > *:hover {
   left: -20%;
 }
 
-#😊 {
+#guy {
   position: absolute;
   max-width: 100%;
 
@@ -188,19 +194,19 @@ a:hover, a > *:hover {
   width: 100%;
 }
 
-#😊 .white {
+#guy .white {
   fill: #fff;
 }
 
-#😊 .orange {
+#guy .orange {
   fill: #ffa000;
 }
 
-#😊 .red {
+#guy .red {
   fill: #d32f2f;
 }
 
-#😊 .green {
+#guy .green {
   fill: #388e3c;
 }
 
@@ -287,7 +293,7 @@ a:hover, a > *:hover {
     right: 0%;
   }
 
-  #😊 {
+  #guy {
     top: 70%;
   }
 

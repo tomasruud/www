@@ -9,14 +9,337 @@
 
   <title>Tomas Ruud</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="./ninja.css" />
+  <style>
+  /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+  </style>
+
+  <style>
+  @keyframes swoosh {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(-10deg);
+    }
+
+    50% {
+      transform: scale(1.1) rotate(10deg);
+    }
+
+    75% {
+      transform: rotate(-10deg);
+    }
+
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg) scale(1.2);
+    }
+
+    100% {
+      transform: rotate(360deg) scale(1.2);
+    }
+  }
+
+  @keyframes blend {
+    0% {transform: rotate(0);}
+    50% {transform: rotate(.2deg);}
+    100% {transform: rotate(0);}
+  }
+
+  @keyframes hover {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+  }
+
+  * {
+    box-sizing: border-box;
+    cursor: url('./arrow.svg'), auto;
+    transition: all .1s ease-in-out;
+  }
+
+  ::selection {
+    background-color: #ffa000;
+    color: #004ba0;
+  }
+
+  body {
+    background-color: #004ba0;
+    overflow-x: hidden;
+
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover, a > *:hover {
+    cursor: url('./hand.svg') 20 0, auto;
+  }
+
+  .🎞 {
+    position: absolute;
+    max-width: 100%;
+  }
+
+  #🏄 {
+    max-width: 1300px; 
+    margin: 0 auto; 
+    position: relative; 
+    z-index: 3; 
+    padding: 20px;
+  }
+
+  #📹 {
+    top: 180%; 
+    left: 20%; 
+    animation-delay: -100ms;
+  }
+
+  #🎧 {
+    top: 290%;
+    right: 30%;
+    animation-delay: -400ms;
+  }
+
+  #📘 {
+    top: 230%; 
+    left: 35%; 
+    animation-delay: -2400ms;
+  }
+
+  #💾 {
+    top: 120%;
+    left: 30%;
+    animation-delay: -1300ms;
+  }
+
+  #📸 {
+    top: 240%;
+    right: 10%;
+    animation-delay: -1750ms;
+  }
+
+  #👷‍ {
+    top: 150%;
+    right: 30%;
+    animation-delay: -2700ms;
+  }
+
+  #🎨 {
+    left: 0%;
+    top: 110%;
+    animation-delay: -2900ms;
+  }
+
+  #🎵 {
+    right: 20%;
+    top: 190%;
+    animation-delay: -700ms;
+  }
+
+  #💯 {
+    position: relative;
+    z-index: 99; 
+
+    margin: 40px auto 0;
+    
+    max-width: 400px; 
+  }
+
+  #name {
+    position: relative;
+    overflow: visible;
+  }
+
+  #name .yellow {
+    fill: #ffa000;
+  }
+
+  #name .yellow,
+  #name .smallwhite,
+  #name .white {
+    animation: hover 4s infinite;
+  }
+
+  #name .white {
+    animation-delay: 500ms;
+  }
+
+  #name .yellow:hover {
+    fill: #d32f2f;
+  }
+
+  #name .white,
+  #name .smallwhite {
+    fill: #fff;
+  }
+
+  #name .white:hover {
+    fill: #388e3c;
+  }
+
+  #name .smallwhite:hover {
+    fill: #d32f2f;
+  }
+
+  #🌊 {
+    z-index: 1; 
+    top: 260%;
+    left: -20%;
+  }
+
+  #guy {
+    position: absolute;
+    max-width: 100%;
+
+    z-index: 2;
+    top: 4%;
+    right: -10%;
+    
+    width: 100%;
+  }
+
+  #guy .white {
+    fill: #fff;
+  }
+
+  #guy .orange {
+    fill: #ffa000;
+  }
+
+  #guy .red {
+    fill: #d32f2f;
+  }
+
+  #guy .green {
+    fill: #388e3c;
+  }
+
+  #blender {
+    animation: blend .1s infinite;
+    transform-origin: 0 66%;
+  }
+
+  #🔭 {
+    position: absolute;
+    z-index: 200;
+    top: 200%;
+    left: 10%;
+    
+    max-width: 400px;
+
+    font-size: 1.25rem;
+    line-height: 1.3;
+
+    padding-right: 20px;
+    padding-bottom: 10%;
+  }
+
+  #🔭 span {
+    background-color: #000;
+    border-radius: 4px;
+  }
+
+  #🔗 {
+    max-width: 100px;
+    right: 0;
+    top: 110%;
+
+    animation: swoosh 3s -1500ms infinite;
+  }
+
+  .👓 {
+    max-width: 60px;
+    max-height: 60px;
+
+    animation: swoosh 3s infinite;
+  }
+
+  .👓:hover {
+    animation: shake 1.5s ease infinite;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    #🏄 {
+      height: 100%;
+    }
+
+    #🔗 {
+      display: none;
+    }
+
+    #📹 {
+      top: 180%; 
+      left: 20%; 
+    }
+
+    #🎧 {
+      top: 90%;
+      right: 30%;
+    }
+
+    #📘 {
+      top: 150%; 
+      left: 45%; 
+    }
+
+    #💾 {
+      top: 110%;
+      left: 30%;
+    }
+
+    #📸 {
+      top: 100%;
+      left: 80%;
+    }
+
+    #👷‍ {
+      top: 140%;
+      right: 0%;
+    }
+
+    #guy {
+      top: 70%;
+    }
+
+    #🌊 {
+      top: 240%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #🌊 {
+      top: 190%;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    #🌊 {
+      display: none;
+    }
+
+    #🔭 span {
+      background-color: transparent;
+    }
+  }
+  </style>
 </head>
 
 <body style="background-color: #004ba0">
   <div id="🏄">
     <div id="💯">
-      <svg id="🛀" viewBox="0 0 604.23 353.87">
+      <svg id="name" viewBox="0 0 604.23 353.87">
         <path class="yellow" d="M177.86,115.7s1.25,163,18.68,184.66S317.93,319,317.11,278,289.3,97.8,286.42,92.53s-48.07-8.2-47.85,2.8,17.39,147.12,16,152c-2,7-11,9-14,3-9.6-19.2-10.92-145.66-19-147.5C217.59,101.91,183.42,93.59,177.86,115.7Z"/>
         
         <path class="yellow" d="M325.57,98.33s-2,167,3,177,49.88,25.53,92,15c32-8,30-116,28-139-.88-10.16-4-61-7-63s-46-5-48,3,11,137,4,145c-2.37,2.71-13,6-16,3s-4-77-4-87,0-60-1-62S327.57,73.33,325.57,98.33Z"/>
@@ -74,9 +397,13 @@
       <a href="https://vsco.co/tomasruud" title="VSCO" target="_blank">
         <img id="🎨" class="🎞 👓" src="./vsco.svg" alt="VSCO">
       </a>
+
+      <a href="https://soundcloud.com/autodrums" title="SoundCloud" target="_blank">
+        <img id="🎵" class="🎞 👓" src="./soundcloud.svg" alt="SoundCloud">
+      </a>
     </div>
 
-    <svg id="😊" viewBox="0 0 1285.64 1230.6">
+    <svg id="guy" viewBox="0 0 1285.64 1230.6">
       <path d="M1283.51,1100.5c-7.38-52-25-176.39-136-245-4.87-3-43.93-26.32-97.75-37.8.43-.34.85-.7,1.24-1.07,44.35-42.57-304.35-156.25-272.75-283.77C793,473.16,914,474.63,914,351c0-29-53.07-98-53.07-98l-45.66,13.33s25.36,33.44,38.26,61.93C891,411,752.86,436.23,717.77,517.18c-48,110.72,98.64,259.11,226.82,298.84a217.34,217.34,0,0,0-73.09,29.48,241.34,241.34,0,0,0-49.69,42C548.83,916.75,387.13,894,357,827c-30.28-67.3,21.93-207.34-32-323-31.91-68.44-136-123-136-123-7,1-30,39-30,39,34,18,60.69,44.69,114,129,65.71,103.93-9.71,204.14,17,286,24.31,74.51,136.33,143.25,473.27,157.56-13.51,46.94-12.56,94.48,5.23,130.94,77.09,158,477.23,121.87,515,16C1285.36,1134.3,1287.2,1126.53,1283.51,1100.5Z"/>
 
       <path class="white" d="M794.56,502.43c8.32,14.82,4.22,36.8-11.5,47-12.39,8.07-28.56,6.59-39.47-1.16-16.9-12-20.72-38.69-8-53.14C750.24,478.55,783.15,482.12,794.56,502.43Z"/>
